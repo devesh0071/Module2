@@ -1,0 +1,136 @@
+JUnit Annotations(1-3):-Annotations were introduced in Junit4, which makes Java code more readable and simple. This is the big difference between Junit3 and Junit4 that Junit4 is annotation based.
+
+With the knowledge of annotations in Junit4, one can easily learn and implement a JUnit test.
+
+1.@Before:-This annotation is used if you want to execute some statement such as preconditions before each test case.
+2.@Test:-This annotation is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.
+3.@After:-This annotation can be used if you want to execute some statements after each Test Case for e.g resetting variables, deleting temporary files ,variables, etc.
+
+JUnit Test Cases Class(4-5):-To run multiple test, TestCase class is available in org.junit.TestCase packages. Annotation @Test tells JUnit that this public void method (Test Case here) to which it is attached can be run as a test case.
+
+Below table shows some important methods available in org.junit.TestCase class:-
+
+4.void setUp():-This method is used to write resource association code. e.g. Create a database connection.
+5.void tearDown():-This method is used to write resource release code. e.g. Release database connection after performing transaction operation.
+
+JUnit Assert Class(6-8):-This class provides a bunch of assertion methods useful in writing a test case. If all assert statements are passed, test results are successful. If any assert statement fails, test results are failed.
+
+As you seen earlier, below table describes important Assert methods and description:
+
+6.void assertTrue(boolean condition):-"assertTrue" functionality is to check that a condition is true.
+7.void assertFalse(boolean condition):-functionality is to check that a condition is false.
+8.void assertEquals(boolean expected, boolean actual):-It checks whether two values are equals similar to equals method of Object class.
+
+9.String projectLocation = System.getProperty("user.dir"); :-it is the way to get the current working directory.
+10.getProperty(String Key):- Gets the system property indicated by the specified key. 
+
+Parameters:
+key the name of the system property.
+Returns:
+the string value of the system property, or null if there is no property with that key.
+
+11.setProperty(String key, String value):-Sets the system property indicated by the specified key. 
+
+Parameters:
+key the name of the system property.
+value the value of the system property.
+Returns:
+the previous value of the system property, or null if it did not have one.
+
+12.WebDriver:-The main interface to use for testing, which represents an idealised web browser. The methods in this interface fall into three categories: 
+
+Control of the browser itself 
+Selection of WebElements 
+Debugging aids 
+
+Key methods are WebDriver.get(String), which is used to load a new web page, and the various methods similar to WebDriver.findElement(By), which is used to find WebElements. 
+
+13.ChromeDriver():-Creates a new ChromeDriver using the default server configuration.
+
+14.manage():-Gets the Option interface
+
+Returns:
+An option interface
+
+15.timeouts():-Returns:
+the interface for managing driver timeouts.
+
+16.mplicitlyWait((long time, TimeUnit unit); :-Specifies the amount of time the driver should wait when searching for an element if it is not immediately present. 
+
+Parameters:
+time The amount of time to wait.
+unit The unit of measure for time.
+Returns:
+A self reference.
+
+17.get(String url); :-Load a new web page in the current browser window.
+
+Parameters:
+url The URL to load.
+
+18.getTitle(); :-The title of the current page.
+
+Returns:
+The title of the current page, with leading and trailing whitespace stripped, or null if one is not already set
+
+19.contentEquals(CharSequence cs) :-Compares this string to the specified CharSequence. The result is true if and only if this String represents the same sequence of char values as the specified sequence. Note that if the CharSequence is a StringBuffer then the method synchronizes on it.
+
+Parameters:
+cs The sequence to compare this String against
+Returns:
+true if this String represents the same sequence of char values as the specified sequence, false otherwise
+
+20.findElement(By by) :-Find the first WebElement using the given method. This method is affected by the 'implicit wait' times in force at the time of execution. The findElement(..) invocation will return a matching row, or try again repeatedly until the configured timeout is reached. findElement should not be used to look for non-present elements, use findElements(By) and assert zero length response instead.
+
+Specified by: findElement(...) in SearchContext
+Parameters:
+by The locating mechanism
+Returns:
+The first matching element on the current page.
+
+21.navigate() :-An abstraction allowing the driver to access the browser's history and to navigate to a given URL.
+
+Returns:
+A org.openqa.selenium.WebDriver.Navigation that allows the selection of what to do next.
+
+22.switchTo() :-Send future commands to a different frame or window.
+
+Returns:
+A TargetLocator which can be used to select a frame or window.
+
+23.alert() :-Switches to the currently active modal dialog for this particular driver instance.
+
+Returns:
+A handle to the dialog.
+
+24.Pattern :-A compiled representation of a regular expression. 
+
+25.matches(String regex, CharSequence input) :- Compiles the given regular expression and attempts to match the given input against it. 
+If a pattern is to be used multiple times, compiling it once and reusing it will be more efficient than invoking this method each time. 
+
+Parameters:
+regex The expression to be compiled
+input The character sequence to be matched
+Returns:
+whether or not the regular expression matches on the input
+
+26.get(int index):-Returns the element at the specified position in this list.
+
+Parameters:
+index index of the element to return
+Returns:
+the element at the specified position in this list.
+
+27.close() :-Close the current window, quitting the browser if it's the last window currently open.
+
+
+
+
+
+
+
+
+
+
+
+
